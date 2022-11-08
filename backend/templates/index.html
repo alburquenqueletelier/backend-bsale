@@ -29,8 +29,11 @@
                     <th scope="row">1</th>
                     <td>/category</td>
                     <td>GET</td>
-                    <td>-</td>
-                    <td>Devuelve un objeto json con el listado de las categorías</td>
+                    <td>
+                        id:int (opcional)<br>
+                        name: str (opcional)<br>
+                    </td>
+                    <td>Devuelve un objeto json con el listado de las categorías. Puede filtrar mediante uno de los parametros.</td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
@@ -41,7 +44,7 @@
                         name: str (opcional)<br>
                         category: int (opcional)<br>
                     </td>
-                    <td>Devuelve un objeto json con el listado de los productos. Puedes filtrar mediante uno de los parametros.</td>
+                    <td>Devuelve un objeto json con el listado de los productos. Puede filtrar mediante uno de los parametros.</td>
                 </tr>
             </tbody>
         </table>

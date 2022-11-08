@@ -51,6 +51,7 @@ def get_products():
             print(id)
             cursor.execute(f'''SELECT * FROM product WHERE id="{id}" LIMIT 1''')
         elif name:
+            name=name.replace('+', ' ')
             cursor.execute(f'''SELECT * from product WHERE name="{name}"''')
         elif category:
             cursor.execute(f'''SELECT * from product WHERE category="{category}"''')
