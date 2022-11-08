@@ -26,12 +26,10 @@ def get_categories():
             cursor.execute(f'''SELECT * FROM category WHERE id="{id}" LIMIT 1''')
         elif name:
             name=name.replace('+', ' ')
-            print(name)
             cursor.execute(f'''SELECT * FROM category WHERE name="{name}" LIMIT 1''')
         else:
             cursor.execute('''SELECT * FROM category''')
         rv = cursor.fetchall()
-        print(rv)
         response = []
         for row in rv:
             response.append({"id": row[0], "name": row[1]})
@@ -48,7 +46,6 @@ def get_products():
     try:
         cursor = mysql.connection.cursor()
         if id:
-            print(id)
             cursor.execute(f'''SELECT * FROM product WHERE id="{id}" LIMIT 1''')
         elif name:
             name=name.replace('+', ' ')
