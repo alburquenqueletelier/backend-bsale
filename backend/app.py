@@ -36,7 +36,8 @@ def get_categories():
             response.append({"id": row[0], "name": row[1]})
         cursor.close()
         return jsonify(response), 200
-    except:
+    except Exception as e:
+        print(e)
         return jsonify({"error": "No fue posible conseguir la data"}), 500
 
 @app.route("/product")
@@ -64,7 +65,8 @@ def get_products():
         cursor.close()
         return jsonify(response), 200
     except Exception as e:
-        return jsonify({"error": e}), 500
+        print(e)
+        return jsonify({"error": "No fue posible cargar productos"}), 500
 
 
 if __name__ == '__main__':
