@@ -2,13 +2,18 @@ import os
 from flask import Flask,render_template, request, jsonify, json
 from flask_mysqldb import MySQL
 from flask_cors import CORS
+
+HOST = os.getenv("HOST")
+USER = os.getenv("USER")
+PASSWORD = os.getenv("PASSWORD")
+DATABASE = os.getenv("DATABASE")
  
 app = Flask(__name__)
  
-app.config['MYSQL_HOST'] = 'mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com'
-app.config['MYSQL_USER'] = 'bsale_test'
-app.config['MYSQL_PASSWORD'] = 'bsale_test'
-app.config['MYSQL_DB'] = 'bsale_test'
+app.config['MYSQL_HOST'] = HOST
+app.config['MYSQL_USER'] = USER
+app.config['MYSQL_PASSWORD'] = PASSWORD
+app.config['MYSQL_DB'] = DATABASE
 
 CORS(app)
 mysql = MySQL(app)
