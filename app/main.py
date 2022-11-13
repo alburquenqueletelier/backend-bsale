@@ -74,6 +74,6 @@ def get_products():
         return jsonify({"error": "No fue posible cargar productos"}), 500
 
 
-if __name__ == '__main__':
-    PORT = int(os.environ.get('PORT', 3000))
-    app.run(host='0.0.0.0', port=PORT, debug=True)
+# if __name__ == '__main__':
+#     PORT = int(os.environ.get('PORT', 3000))
+#     app.run(host='0.0.0.0', port=PORT, debug=True)
