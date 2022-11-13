@@ -8,6 +8,7 @@ flask = "*"
 install = "*"
 flask-mysqldb = "*"
 flask-cors = "*"
+gunicorn = "*"
 
 [dev-packages]
 
